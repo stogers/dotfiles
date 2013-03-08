@@ -440,7 +440,6 @@ set statusline=                              " reset statusline
 set statusline+=%<\                          " cut at start
 set statusline+=[%n%1*%H%M%R%W%*]\           " flags and buf no
 set statusline+=%2*\ %-.50f\ %*              " path
-set statusline+=%1*%{SyntasticStatuslineFlag()}%*
 set statusline+=\ [%{strlen(&ft)?&ft:'none'},  " filetype
 set statusline+=%{strlen(&fenc)?&fenc:&enc}, " encoding
 set statusline+=%{&fileformat}]\             " file format
@@ -450,4 +449,3 @@ set statusline+=%k\ %*\                      " keymap
 set statusline+=%=                           " right align
 set statusline+=%3*\ %{synIDattr(synID(line('.'),col('.'),1),'name')}\ %*\  " highlight
 set statusline+=%b,0x%B\                   " current char
-set statusline+=%{fugitive#statusline()}\    " git status line
